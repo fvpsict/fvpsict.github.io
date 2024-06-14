@@ -85,6 +85,7 @@
          <!-- ICT Request-->
         <section class="page-section" id="ictrequest">
         <style>
+        <style>
         .container {
             display: flex;
             flex-direction: column;
@@ -96,14 +97,21 @@
         .text-center {
             text-align: center;
         }
-        .iframe-container {
+        .content {
             display: flex;
             justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            gap: 20px; /* Add space between the QR code and the form */
         }
         .img-top {
             display: block;
-            margin: 20px auto 0;
-            vertical-align: top;
+            width: 400px; /* Set width for the QR code image */
+            height: auto; /* Maintain aspect ratio */
+        }
+        iframe {
+            width: 600px; /* Set width for the iframe */
+            height: 800px; /* Set height for the iframe */
+            border: 2px solid #000; /* Example border styling */
         }
         </style>
         <title>ICT Request</title>
@@ -117,9 +125,11 @@
                     <a href="https://go.gov.sg/ictequipmentloan" target="_blank"><b>LINK</b></a>
                 </h6>
             </div>
-            <img src="assets/img/ictequipmentloan.png" width="400" height="400" class="img-top">
-            <div class="iframe-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScoZFM9y1H6iP-_apNBpDPrqSCGRfgRb_eEuiQ8g74sSaBx0g/viewform?embedded=true" width="600" height="800" frameborder="2" marginheight="0" marginwidth="0">Loading…</iframe>
+            <div class="content">
+                <img src="assets/img/ictequipmentloan.png" alt="QR Code" class="img-top">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScoZFM9y1H6iP-_apNBpDPrqSCGRfgRb_eEuiQ8g74sSaBx0g/viewform?embedded=true">
+                    Loading…
+                </iframe>
             </div>
         </div>
         </section>
